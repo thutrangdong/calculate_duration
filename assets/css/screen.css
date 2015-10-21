@@ -1,0 +1,92 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    background-color: #272822;
+    color: #f9f9f9;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 3em;
+
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin: 0 auto;
+    width: 60% /*whatever width you want*/;
+}
+
+
+.result, .pick-another{
+    padding: 2% 0.5%;
+}
+
+/* RESULT */
+.result{
+    background-color: #e84e3c;
+    text-align: center;
+}
+
+
+/* PICK ANOTHER DATE */
+
+
+.pick-another{
+    background: linear-gradient(to left, #3498db 50%, #58ACE3 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    transition:all .5s ease;
+    text-align: center;
+    margin-top: 9%;
+}
+
+.pick-another:hover{
+    background-position:left bottom;
+    cursor: pointer;
+
+}
+
+.pick-another:hover span{
+    display: none;
+}
+
+.pick-another:hover:before {
+    content: 'Yes!';
+}
+
+.submit-button{
+    display: none;
+}
+
+input#datepicker {
+    outline: none;
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+#ui-datepicker-div{
+    font-size: 1em;
+}
+
+.past-date{
+    width: 100%;
+    font-size: 0.7em;
+}
